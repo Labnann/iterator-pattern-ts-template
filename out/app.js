@@ -27,4 +27,4 @@ setTimeout(function () {
         var data = iterator.current();
         console.log(data);
     }
-}, 5000);
+}, 2000);

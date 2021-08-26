@@ -29,4 +29,4 @@ setTimeout(()=>{
         console.log(data);
 
     }
-},5000)
+},2000)
