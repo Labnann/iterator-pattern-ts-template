@@ -1,4 +1,4 @@
-export class WeatherData{
+export class WeatherData implements Iterable{
    private _name:string;
     private _temperature: number;
 
@@ -14,5 +14,10 @@ export class WeatherData{
         this._name = name;
         this._temperature = temperature;
     }
+
+}
+
+
+export interface Iterable{
 
 }

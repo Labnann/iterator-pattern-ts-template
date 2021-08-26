@@ -1,22 +1,23 @@
-import {WeatherDataIterator} from "./WeatherDataIterator";
+import {ArrayIterator} from "./ArrayIterator";
 import {Collection} from "./Collection";
-import {WeatherData} from "./WeatherData";
+import {Iterable, WeatherData} from "./WeatherData";
+import {Iterator} from "./Iterator";
 
 
-export class WeatherDataCollection implements Collection {
-    private items: WeatherData[] = [];
+export class WeatherDataCollection implements Collection<Iterable> {
+    private items: Iterable[] = [];
 
-    public getItems(): WeatherData[] {
+    public getItems(): Iterable[] {
         return this.items;
     }
 
 
-    public addItem(item: WeatherData): void {
+    public addItem(item: Iterable): void {
         this.items.push(item);
     }
 
-    public getIterator(): WeatherDataIterator {
-       return new WeatherDataIterator(this.items);
+    public getIterator(): Iterator<Iterable> {
+       return new ArrayIterator<Iterable>(this.items);
     }
 
 

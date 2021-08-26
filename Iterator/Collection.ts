@@ -1,6 +1,8 @@
-import {WeatherDataIterator} from "./WeatherDataIterator";
+import {ArrayIterator} from "./ArrayIterator";
+import {Iterator} from "./Iterator";
 
-export interface Collection {
+export interface Collection <T> {
     // Retrieve an external iterator.
-    getIterator(): WeatherDataIterator;
+    getIterator(): Iterator<unknown>;
+    addItem(data: T): void;
 }

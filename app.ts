@@ -1,9 +1,11 @@
 import loadJSON from "./loadJson";
-import {WeatherData} from "./Iterator/WeatherData";
+import {Iterable, WeatherData} from "./Iterator/WeatherData";
 import {WeatherDataCollection} from "./Iterator/WeatherDataCollection";
+import {Iterator} from "./Iterator/Iterator";
+import {Collection} from "./Iterator/Collection";
 
 
-const weatherDataCollection = new WeatherDataCollection();
+const weatherDataCollection:Collection<Iterable> = new WeatherDataCollection();
 
 addCity("Dhaka");
 addCity("Chittagong");
