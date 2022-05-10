@@ -1,0 +1,1 @@
+"# iterator-pattern-ts-template" 
