@@ -28,6 +28,7 @@ setTimeout(()=>{
     while (iterator.hasNext()){
         iterator.advance();
         const data = iterator.current();
+
         console.log(data);
 
     }
